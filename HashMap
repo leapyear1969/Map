@@ -1,9 +1,28 @@
 //HashMap<Key, Value> hm = new HashMap<String, String>();
+import java.util.HashMap;
 
 //需求：存储编号和姓名
 //键： 编号 12345， integer
 //值： 姓名 “张三” 	String 
 
-class HashMapDemo{}
+class HashMapDemo{
+  public static void main(String[] args){
+    //create collection
+    HashMap<Integer,String> hm = new HashMap<Integer, String>();
+    
+    //add elements
+    hm.put(1,"Jason");
+    hm.put(2,"Nike");
+    hm.put(3,"Alex");
+    hm.put(4,"Well");
+    
+    //bianli
+    Set<Integer> set = hm.keySet();
+    for(Integer i: set){
+      String name = hm.get(i);
+      Syso(i+name);
+    }
+  }
+}
 
 
