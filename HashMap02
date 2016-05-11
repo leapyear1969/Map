@@ -1,0 +1,50 @@
+假设HashMap集合的元素是ArrayList。有三个
+每一个ArrayList集合的值是字符串
+元素我已经完成，请遍历
+
+结果：
+	三国演义
+		吕布
+		周瑜
+	笑傲江湖
+		令狐冲
+		凌平之
+	神雕侠侣
+		郭靖
+		黄蓉
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+class HashMap02{
+  public static void main(String[] args){
+    //create list
+    ArrayList<String> arry1 = new ArrayList<String>();
+    arry1.add("吕布");
+    arry1.add("周瑜");
+    
+    ArrayList<String> arry2 = new ArrayList<String>();
+    arry2.add("令狐冲");
+    arry2.add("凌平之");
+    
+    ArrayList<String> arry3 = new ArrayList<String>();
+    arry3.add("郭靖");
+    arry3.add("黄蓉");
+  
+    //create collection
+    HashMap<String,ArrayList<String>> hm = new HashMap<String,ArrayList<String>>();
+    
+    //add to collection
+    hm.put("三国演义",arry1);
+    hm.put("笑傲江湖",arry2);
+    hm.put("神雕侠侣",arry3);
+    
+    //bianli
+    Set<String> set = hm.keySet();
+    for(String book:set){
+      ArrayList<String>  arrary = hm.get(book);
+        for(String name: arrary){
+            Syso(book+name);
+      }
+    }
+  }
+}
