@@ -1,0 +1,9 @@
+//HashMap<Key, Value> hm = new HashMap<String, String>();
+
+//需求：存储编号和姓名
+//键： 编号 12345， integer
+//值： 姓名 “张三” 	String 
+
+class HashMapDemo{}
+
+
